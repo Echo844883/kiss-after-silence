@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080a0f">
+  <title>吻在静默之后</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="game">
+    <section id="title-screen" class="title-screen">
+      <div class="cover" role="img" aria-label="穆初寒、季洛伊与她们的精神体"></div>
+      <div class="title-copy">
+        <p class="eyebrow">白栖港 · 视觉小说</p>
+        <h1>吻在静默之后</h1>
+        <button id="start" class="primary">开始故事 <span aria-hidden="true">→</span></button>
+      </div>
+      <p class="hint">点击 / Enter / Space 推进</p>
+    </section>
+
+    <section id="novel" class="novel" hidden>
+      <div id="background" class="background"></div>
+      <div class="vignette"></div>
+      <header class="topbar">
+        <span id="chapter-label"></span>
+        <button id="restart" class="ghost">回到标题</button>
+      </header>
+      <div id="portrait-mu" class="portrait portrait-mu" hidden><img alt="穆初寒"></div>
+      <div id="portrait-ji" class="portrait portrait-ji" hidden><img alt="季洛伊"></div>
+      <div id="choice-layer" class="choice-layer" hidden role="dialog" aria-modal="true" aria-labelledby="choice-title">
+        <div class="choice-card">
+          <p id="choice-title" class="choice-title"></p>
+          <div id="choices" class="choices"></div>
+        </div>
+      </div>
+      <button id="dialogue" class="dialogue" type="button" aria-label="推进对话">
+        <span class="dialogue-meta">
+          <span id="speaker" class="speaker" hidden></span>
+          <span id="context-label" class="context-label" hidden></span>
+        </span>
+        <span id="text" class="text"></span>
+        <span id="next-indicator" class="next-indicator" aria-hidden="true">⌄</span>
+      </button>
+    </section>
+
+    <section id="ending" class="ending" hidden>
+      <div class="ending-inner">
+        <p>未完待续</p>
+        <button id="replay" class="primary">重新开始</button>
+      </div>
+    </section>
+    <div id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  </main>
+  <script src="story.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
